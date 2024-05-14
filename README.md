@@ -1,7 +1,5 @@
 # Project 2
 
-** Due: Mon Nov 7, 11:59pm PT **
-
 ## Goal
 
 Provide ( in `public/`) the necessary HTML, CSS, and JS files to create the experience shown in the included images using the skills and best practices taught in class.

@@ -1,0 +1,635 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+
+    background-color: papayawhip;
+
+    font-family: sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+    min-height: 100vh;
+}
+
+.skiplink {
+    position: absolute;
+    left: -50%;
+}
+
+.skiplink:focus {
+    left: 50%;
+}
+
+header {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    background-color: burlywood;
+}
+
+.headerimage {
+    grid-column-start: 1;
+    vertical-align: bottom;
+
+    padding-right: 2rem;
+}
+
+header h1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    grid-column: span 10;
+
+    margin-right: 2rem;
+
+    color: black;
+
+    font-size: 2rem;
+}
+
+.topnav {
+    position: relative;
+    top: 35%;
+    right: 35%;
+}
+
+.menu {
+    justify-content: center;
+
+    padding-left: 0.3rem;
+    margin: 0;
+
+    background-color: black;
+
+    opacity: 0.7;
+    list-style-type: none;
+}
+
+.menu__item {
+    padding: 0.7rem;
+    margin: 0.3rem;
+
+    text-align: center;
+}
+
+.menu__item a {
+    padding: 1rem;
+
+    color: black;
+
+    text-decoration: none;
+}
+
+.menu__item a:hover {
+    background-color: white;
+    color: black;
+}
+
+/*Hamburger Menu Icon*/
+.gg-menu {
+    grid-column-start: -1;
+
+    transform: scale(var(--ggs, 1));
+    scale: 1.2;
+    cursor: pointer;
+    color: black;
+}
+
+.gg-menu,
+.gg-menu::after,
+.gg-menu::before {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 3px;
+    background: currentColor
+}
+
+.gg-menu::after,
+.gg-menu::before {
+    content: "";
+    position: absolute;
+    top: -6px
+}
+
+.gg-menu::after {
+    top: 6px
+}
+
+.dropdown-content a {
+    display: block;
+
+    padding: 12px 16px;
+    margin-bottom: 2px;
+
+    color: blue;
+
+    text-decoration: underline;
+}
+
+.dropdown-content a:hover, .dropdown-content a:focus {
+    background-color: blue;
+    color: white;
+}
+
+.dropdown-content {
+    background-color: burlywood;
+    position: absolute;
+
+    right: -20%;
+    min-width: max-content;
+}
+
+.dropdown-button {
+    border: none;
+
+    background-color: transparent;
+    color: black;
+
+    height: 2.5rem;
+    width: 2.5rem;
+
+    cursor: pointer;
+}
+
+.inactive {
+    display: none;
+
+    background-color: #f1f1f1;
+
+    min-width: 160px;
+    position: absolute;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.firstpanel, .secondpanel {
+    border: 1px solid black;
+    margin-left: 0.1rem;
+    margin-right: 0.1rem;
+
+    background-color: #eeeeee;
+}
+
+.secondpanel {
+    margin-bottom: 2rem;
+}
+
+.firstpanel h2 {
+    margin: 0.5rem;
+    margin-top: 2rem;
+
+    text-align: center;
+}
+
+.secondpanel h2 {
+    margin: 0.5rem;
+    margin-top: 2rem;
+
+    text-align: center;
+}
+
+.firstpanel-image {
+    margin-right: 2rem;
+
+    float: right;
+}
+
+.secondpanel-image {
+    float: left;
+}
+
+.firstpanel p {
+    margin-bottom: 2rem;
+}
+
+.secondpanel p {
+    margin-bottom: 2rem;
+}
+
+.firstpanel img {
+    width: 125px;
+    height: 125px;
+}
+
+.secondpanel img {
+    width: 125px;
+    height: 125px;
+}
+
+.headerimage:focus {
+    background-color: unset;
+    color: unset;
+}
+
+.footerlinks__item a:hover {
+    text-decoration: underline;
+}
+
+.famous-page-content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    grid-gap: 1rem;
+    margin: 1rem;
+}
+
+.card1, .card2, .card3, .card4, .card5, .card6 {
+    grid-column: 1/13;
+
+    border: 1px solid black;
+    border-radius: 2rem;
+    padding: 0 0.5rem 0.5rem 0.5rem;
+
+    background-color: #eeeeee;
+}
+
+.subscribe, .subscribe-second-card {
+    border: none;
+
+    background: none !important;
+    color: blue;
+
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.input-email, .input-confirm-email {
+    display: flex;
+
+    margin: 0.5rem 0 0.2rem 0;
+
+    width: 24rem;
+}
+
+.submit-button, .cancel-button {
+    padding: 0.5rem;
+    border-radius: 1rem;
+
+    font-size: 1.2rem;
+}
+
+.submit-button {
+    background-color: lime;
+}
+
+.cancel-button {
+    margin-left: 2rem;
+
+    background-color: lightcoral;
+}
+
+.register-email-error, .register-confirm-email-error {
+    color: red;
+
+    font-size: 1rem;
+}
+
+.inputemail-invalid-color, .inputconfirmemail-invalid-color {
+    border: 1px solid red;
+}
+
+.form-first-field, .form-second-field {
+    margin-bottom: 2rem;
+}
+
+.modal::backdrop {
+    background-color: rgb(0 0 0 / 0.7);
+}
+
+.modal {
+    border: 3px solid black;
+    margin-top: 21rem;
+    padding-right: 1rem;
+
+}
+
+p {
+    font-size: 1rem;
+    font-family: sans-serif;
+}
+
+.required {
+    padding-left: 1rem;
+
+    color: gray;
+
+    font-style: italic;
+}
+
+.firstpanel img, .secondpanel img, .firstpanel-content, .secondpanel-content {
+    margin: 0.5rem;
+}
+
+.dropdown-content a:visited {
+    color: purple;
+}
+
+.dropdown-content a:focus {
+    background-color: blue;
+    color: white;
+}
+
+.dropdown-content a:visited:hover {
+    color: white;
+}
+
+.request-text {
+    text-align: center;
+
+    font-size: 1.5rem;
+}
+
+.cat-events h2 {
+    display: flex;
+    justify-content: center;
+
+    margin: 2rem;
+}
+
+.events {
+    background-color: bisque;
+
+    margin: 2rem;
+    border-radius: 2rem;
+
+    padding: 1rem;
+}
+
+.events img {
+    border-radius: 1rem;
+    transition: transform .2s;
+}
+
+.events img:hover {
+    transform: scale(1.2);
+}
+
+.register-email-error, .register-confirm-email-error {
+    font-style: italic;
+}
+
+.footer {
+    margin-top: 1rem;
+}
+
+.footerlinks {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    padding-left: 0.3rem;
+    margin: 0;
+
+    background-color: burlywood;
+
+    list-style: none;
+}
+
+.footerlinks__item {
+    grid-column: span 12;
+
+    margin: 0.3rem;
+}
+
+.footerlinks__item a {
+    text-decoration: underline;
+}
+
+.footerlinks__item a:focus {
+    background-color: initial;
+    color: blue;
+}
+
+@media screen and (min-width: 44rem) and (prefers-reduced-motion: no-preference) {
+    header {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    header h1 {
+        grid-column: span 10;
+    }
+
+    header .topnav {
+        grid-column: span 12;
+        grid-row-start: 2;
+        top: initial;
+        right: initial;
+    }
+
+    .topnav .menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        height: 100%;
+        width: 100%;
+    }
+
+    .menu__item a {
+        margin: 0;
+
+        height: 100%;
+    }
+
+    .menu__item a:hover {
+        background-color: white;
+        color: black;
+
+        height: 100%;
+    }
+
+    /*Hamburger Open Icon*/
+    .gg-menu, .dropdown-button {
+        display: none;
+    }
+
+    .topnav {
+        grid-row-start: 2;
+    }
+
+    .inactive {
+        display: block;
+
+        background-color: initial;
+
+        min-width: initial;
+        position: initial;
+        overflow: initial;
+        box-shadow: initial;
+        z-index: initial;
+    }
+
+    .dropdown-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        position: initial;
+    }
+
+    .content-heading {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-column: span 12;
+    }
+
+    .content-heading h2 {
+        grid-column: span 12;
+    }
+
+    .firstpanel, .secondpanel {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: 1fr auto;
+    }
+
+    .firstpanel h2 {
+        grid-column-start: 1;
+        grid-row-start: 1;
+    }
+
+    .firstpanel, .secondpanel {
+        margin: 1rem;
+    }
+
+    .firstpanel img {
+        grid-row: 1 / 3;
+
+        margin: 0.5rem;
+
+        width: 200px;
+        height: 200px;
+    }
+
+    .secondpanel img {
+        margin: 0.5rem;
+
+        grid-row: 1 / 3;
+
+        width: 200px;
+        height: 200px;
+    }
+
+    .card1 {
+        grid-column: 1/5;
+        grid-row: 1;
+
+        margin-right: 0;
+    }
+
+    .card2 {
+        grid-column: 5/9;
+        grid-row: 1;
+
+        margin-right: 0;
+    }
+
+    .card3 {
+        grid-column: 9/13;
+        grid-row: 1;
+    }
+
+    .card4 {
+        grid-column: 1/5;
+        grid-row: 2;
+
+        margin-right: 0;
+    }
+
+    .card5 {
+        grid-column: 5/9;
+        grid-row: 2;
+
+        margin-right: 0;
+    }
+
+    .card6 {
+        grid-column: 9/13;
+        grid-row: 2;
+    }
+
+    .image {
+        display: flex;
+        justify-content: center;
+    }
+
+    .card1 h2 {
+        margin: 2rem;
+
+        text-align: center;
+    }
+
+    .card2 h2 {
+        margin: 2rem;
+
+        text-align: center;
+    }
+
+    .card3 h2 {
+        margin: 2rem;
+
+        text-align: center;
+    }
+
+    .card4 h2 {
+        margin: 2rem;
+
+        text-align: center;
+    }
+
+    .card5 h2 {
+        margin: 2rem;
+
+        text-align: center;
+    }
+
+    .card6 h2 {
+        margin: 2rem;
+
+        text-align: center;
+    }
+
+    .events {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 2rem;
+
+        margin: 2rem;
+        border-radius: 2rem;
+        padding: 1rem;
+
+        background-color: bisque;
+    }
+
+    .footerlinks__item {
+        grid-column: span 3;
+        align-items: center;
+        text-align: center;
+
+        padding: 1.3rem;
+    }
+}
